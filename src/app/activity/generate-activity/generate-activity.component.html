@@ -1,0 +1,37 @@
+<div class="container text-center mt-4">
+    <button class="btn btn-primary" (click)="generate()">Genera attività</button>
+</div>
+<div *ngIf="activityList" class="container">
+    <table class="table container mt-3">
+        <thead>
+            <tr>
+                <th>{{activityList.activity}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Difficoltà</td>
+                <td>{{activityList.accessibility}}</td>
+            </tr>
+            <tr>
+                <td>Tipo</td>
+                <td>{{activityList.type}}</td>
+            </tr>
+            <tr>
+                <td>Partecipanti</td>
+                <td>{{activityList.participants}}</td>
+            </tr>
+            <tr>
+                <td>Prezzo</td>
+                <td>{{activityList.price}}</td>
+            </tr>
+            <tr>
+                <td>Link</td>
+                <td>{{activityList.link}}</td>
+            </tr>
+        </tbody>    
+    </table>
+    <div class="text-center">
+        <button class="btn btn-primary" (click)="favorite(activityList)">Salva Preferito</button>
+    </div>
+</div>

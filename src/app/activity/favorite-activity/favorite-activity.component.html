@@ -1,0 +1,22 @@
+<table class="table container">
+    <thead>
+        <tr>
+            <th scope="col">Attività</th>
+            <th scope="col">Difficoltà</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Partecipanti</th>
+            <th scope="col">Prezzo</th>
+            <th scope="col">Link</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="activityList">
+        <tr *ngFor="let activity of activityList">
+            <th>{{activity.activity}}</th>
+            <th>{{activity.accessibility}}</th>
+            <th>{{activity.type}}</th>
+            <th>{{activity.participants}}</th>
+            <th>{{activity.price}}</th>
+            <th>{{activity.link}}</th>
+        </tr>
+    </tbody>
+</table>
